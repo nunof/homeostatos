@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+       <meta name="robots" content="NOODP,NOYDIR">
+
+       <title>Poemario does the Homeostatos game</title>
+       
+       <!-- Poemario.js loads jquery but we need to load it explicitly here in order to support braindead Android 2.3.3 HTML/DOM parser -->
+       <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+       <script type="text/javascript" src="js/Poemario.js"></script>
+       <script src="js/jszip.min.js"></script>
+		 <script src="js/jszip-utils.min.js"></script>
+		 <script src="js/homeostatos_simple.js"></script>
+       
+       <script type="text/javascript">
+       
+		    var pmr = new Poemario(1, 1, 1, 200, 50, ["poem1.xml"], 2, true, "config");
+		    var hes = new Homeostatos("homeostatos.zip");
+
+			 $(document).on('click', '#homeocenter', function() {
+	       		$("#homeocenter").css("visibility", "hidden");
+	       		pmr.txt_resume();
+			 });
+
+
+			 $(document).on('click', '.vers', function() {
+			 		pmr.txt_stop_stateful();
+	       		$("#homeocenter").css("visibility", "visible");
+	       		$("#output").html($(this).text() + "<BR>");
+	       		var max_words = $(this).text().length / 20 | 0;;
+	       		hes.set_algorithm(hes.COLUMNS, max_words, 20);
+					$("#output").append(hes.generate_homeos($(this).text()));
+			 });
+
+		    
+       </script> 
+   </head>
+
+   <body id="body" onload="pmr.txt_start();">
+       <div id="homeocenter" style=" opacity: 0.9; background: #D0D0D0;border-radius: 25px;border: 2px solid #8AC007;padding: 20px;z-index:9999;position:fixed;top:50%;left:50%;width:90%;transform: translate(-50%, -50%);visibility:hidden">
+       <p id="output" style="font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; font-size:small"></p>
+       </div>
+         
+     </body>
+</html>

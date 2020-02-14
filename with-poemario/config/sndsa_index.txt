@@ -1,0 +1,14 @@
+./soundsa/ChargedLightningAttack8-Bit.ogg
+./soundsa/Collision8-Bit.ogg
+./soundsa/DrainMagic.ogg
+./soundsa/Heal8-Bit.ogg
+./soundsa/Death.ogg
+./soundsa/Crush8-Bit.ogg
+./soundsa/FunkyZap.ogg
+./soundsa/ChargedSonicBoomAttack8-Bit.ogg
+./soundsa/EnemyDeath.ogg
+./soundsa/BigBossDeath.ogg
+./soundsa/FreezeMagic.ogg
+./soundsa/BossDeath.ogg
+./soundsa/BigWave.ogg
+./soundsa/FlameMagic.ogg

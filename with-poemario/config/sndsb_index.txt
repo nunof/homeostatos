@@ -1,0 +1,10 @@
+./soundsb/Metal_Hit.ogg
+./soundsb/Soft_Airy_Swish.ogg
+./soundsb/KirbyStyleLaser.ogg
+./soundsb/StormMagic.ogg
+./soundsb/Slash8-Bit.ogg
+./soundsb/TornadoMagic.ogg
+./soundsb/MediumExplosion8-Bit.ogg
+./soundsb/SmallExplosion8-Bit.ogg
+./soundsb/Powerup.ogg
+./soundsb/ThunderMagic.ogg

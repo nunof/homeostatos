@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Olhó o homeostato!</title>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="js/jcanvas.min.js"></script>
+<script src="js/jszip.min.js"></script>
+<script src="js/jszip-utils.min.js"></script>
+<script src="homeostatos_canvas.js"></script>
+</head>
+<body>
+<div>
+<form id="form">
+	<input id="textinput" type="text" value="Um poema cresce inseguramente na confusão da carne, sobe ainda sem palavras, só ferocidade e gosto" style="width: 1200px;"></input>
+	<br>
+	<label id="lbl_max_homeos" for="max_homeos">MAX HOMEOS 21</label>
+	<input type="range" id="max_homeos" name="max_homeos" min="1" max="300" value="21" onchange="$('#lbl_max_homeos').text('Max Homeos ' + this.value);">
+	<br>  
+	<label id="lbl_algorithm">Algorithm</label>	
+	<input type="radio" name="algorithm" value="chunked" onchange="switch_showhide();" checked>Chunked
+	<input type="radio" name="algorithm" value="grammar" onchange="switch_showhide();">Grammar
+	<br>
+	<label id="lbl_max_words" for="max_words">MAX_WORDS 1</label>
+	<input type="range" id="max_words" name="max_words" min="1" max="4" value="1" onchange="$('#lbl_max_words').text('Max Words ' + this.value);">
+	<br>
+	<label id="lbl_grammar" for="grammar">Grammar</label>	
+	<textarea id="grammar" name="grammar" rows="4" cols="80">adjs_f_p, subs_f_p
+adjs_f_s, subs_f_s</textarea>
+	<br>
+	<label id="info" for="button">Ready when you are</label>  
+	<input id="button" type="button" value="Just Do It!" onclick="work()">
+
+</form>
+</div>
+<hr>
+<div id="output" style="height:12000px">
+<canvas id="poem"></canvas>
+</div>
+</body>
+</html
